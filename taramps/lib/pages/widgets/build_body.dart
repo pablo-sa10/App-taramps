@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../pages/components/graphics/graphcs.dart';
 import '../../model/canal_button_model.dart';
-import 'package:graphic/graphic.dart';
-
 import '../components/canal_button.dart';
+
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -30,34 +30,7 @@ class _BodyState extends State<Body> {
               }).toList(),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 50.0, bottom: 20),
-            child: SizedBox(
-                height: 500,
-                child: Chart(
-                  data: const [
-                    { 'genre': 'Sports', 'sold': 275 },
-                    { 'genre': 'Strategy', 'sold': 115 },
-                    { 'genre': 'Action', 'sold': 120 },
-                    { 'genre': 'Shooter', 'sold': 350 },
-                    { 'genre': 'Other', 'sold': 150 },
-                  ],
-                  variables: {
-                    'genre': Variable(
-                      accessor: (Map map) => map['genre'] as String,
-                    ),
-                    'sold': Variable(
-                      accessor: (Map map) => map['sold'] as num,
-                    ),
-                  },
-                  marks: [IntervalMark()],
-                  axes: [
-                    Defaults.horizontalAxis,
-                    Defaults.verticalAxis,
-                  ],
-                )
-            ),
-          )
+          const Graphic()
         ],
       ),
     );
