@@ -13,11 +13,12 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  Color? selectedColor;
+  //Color? selectedColor;
+  int? selectedGraphic;
 
-  void _onButtonPressed(Color color) {
+  void _onButtonPressed(int data) {
     setState(() {
-      selectedColor = color;
+      selectedGraphic = data;
     });
   }
 
@@ -38,13 +39,14 @@ class _BodyState extends State<Body> {
               children: buttonModels.map((canal) {
                 return CanalButton(
                     model: canal,
-                    onPressed: () => _onButtonPressed(canal.color));
+                    //onPressed: () => _onButtonPressed(canal.color));
+                    onPressed: () => _onButtonPressed(canal.data));
               }).toList(),
             ),
           ),
           //if (selectedColor != null) SquareWidget(color: selectedColor!),
           //Graphic(data: graphicData),
-          if (selectedColor != null) Graphic(data: graphicData),
+          if (selectedGraphic != null) Graphic(data: graphicData),
         ],
       ),
     );
