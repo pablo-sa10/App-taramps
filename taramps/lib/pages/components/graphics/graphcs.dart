@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart';
+import 'package:taramps/model/graphics_model.dart';
 
 class Graphic extends StatefulWidget {
-  const Graphic({super.key});
+  final List<GraphicsModel> data;
+  const Graphic({super.key, required this.data});
 
   @override
   State<Graphic> createState() => _GraphicState();
@@ -16,13 +18,9 @@ class _GraphicState extends State<Graphic> {
       child: SizedBox(
           height: 500,
           child: Chart(
-            data: const [
-              { 'genre': 'Sports', 'sold': 275 },
-              { 'genre': 'Strategy', 'sold': 115 },
-              { 'genre': 'Action', 'sold': 120 },
-              { 'genre': 'Shooter', 'sold': 350 },
-              { 'genre': 'Other', 'sold': 150 },
-            ],
+            data: widget.data.map((model) {
+              return {'genre': model.genre, 'sold': model.data};
+            }).toList(),
             variables: {
               'genre': Variable(
                 accessor: (Map map) => map['genre'] as String,
@@ -36,8 +34,7 @@ class _GraphicState extends State<Graphic> {
               Defaults.horizontalAxis,
               Defaults.verticalAxis,
             ],
-          )
-      ),
+          )),
     );
   }
 }

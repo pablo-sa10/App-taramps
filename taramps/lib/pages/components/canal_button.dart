@@ -3,8 +3,9 @@ import 'package:taramps/model/canal_button_model.dart';
 
 class CanalButton extends StatefulWidget {
   final CanalButtonModel model;
+  final VoidCallback onPressed;
 
-  const CanalButton({super.key, required this.model});
+  const CanalButton({super.key, required this.model, required this.onPressed});
 
   @override
   State<CanalButton> createState() => _CanalButtonState();
@@ -23,8 +24,8 @@ class _CanalButtonState extends State<CanalButton> {
           ),
         ),
       ),
+      onPressed: widget.onPressed,
       child: Text(widget.model.canal),
-      onPressed: () {},
     );
   }
 }
