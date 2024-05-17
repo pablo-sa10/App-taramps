@@ -8,10 +8,10 @@ class CanalButtonModel{
     //   CanalButtonModel(canal: '3', color: Colors.green),
     //   CanalButtonModel(canal: '4', color: Colors.yellow),
     // ];return[
-      CanalButtonModel(canal: "1", data: 150),
-      CanalButtonModel(canal: "2", data: 150),
-      CanalButtonModel(canal: "3", data: 150),
-      CanalButtonModel(canal: "4", data: 150),
+      CanalButtonModel(canal: "1", data: 1),
+      CanalButtonModel(canal: "2", data: 2),
+      CanalButtonModel(canal: "3", data: 3),
+      CanalButtonModel(canal: "4", data: 4),
     ];
   }
 

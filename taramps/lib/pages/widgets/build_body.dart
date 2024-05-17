@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taramps/pages/components/teste.dart';
 import '../../model/graphics_model.dart';
-import '../../pages/components/graphics/graphcs.dart';
+import '../../controller/graphics/graphcs.dart';
 import '../../model/canal_button_model.dart';
 import '../components/canal_button.dart';
 
