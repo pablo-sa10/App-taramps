@@ -5,7 +5,6 @@ import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 class GraphicDisplay extends StatefulWidget {
   final int selectedGraph;
-
   const GraphicDisplay({super.key, required this.selectedGraph});
 
   @override
