@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:taramps/src/pages/home_screen.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // BUSCA O ULTIMO TEMA SALVO PELO USUARIO
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  bool isDark = prefs.getBool('isDarkTheme') ?? false;
+
+
+
   runApp(const MyApp());
 }
 

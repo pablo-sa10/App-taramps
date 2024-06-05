@@ -28,6 +28,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  provider: ^6.1.2
+  shared_preferences: ^2.2.3
   flutter:
     sdk: flutter
 
@@ -37,9 +39,6 @@ dependencies:
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
-  syncfusion_flutter_charts: ^25.2.5
-  fl_chart: ^0.68.0
-  graphic: ^2.2.1
   flutter_test:
     sdk: flutter
 

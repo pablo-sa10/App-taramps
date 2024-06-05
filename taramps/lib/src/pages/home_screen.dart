@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:taramps/src/components/graphic_display.dart';
-import 'package:taramps/src/pages/widgets/drawer.dart';
-
-
-import '../components/canal_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,15 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
           width: 100,
         ),
         centerTitle: true,
-      ),
-      drawer: BuildDrawer.getDrawer(context),
-      body: ListView(
-        padding: const EdgeInsets.all(20),
-        children: [
-          CanalButton(onButtonPressed: updateGraph),
-          SizedBox(height: 40),
-          GraphicDisplay(selectedGraph: selectedGraph),
-        ],
       ),
     );
   }
