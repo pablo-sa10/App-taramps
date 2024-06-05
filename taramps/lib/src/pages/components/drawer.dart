@@ -27,6 +27,14 @@ class BuildDrawer{
             onTap: () {},
           ),
           ListTile(
+            leading: const Icon(Icons.light_mode),
+            title: const Text(
+              "Mudar Tema",
+              textAlign: TextAlign.center,
+            ),
+            onTap: () {},
+          ),
+          ListTile(
             leading: const Icon(Icons.logout),
             title: const Text(
               "Sair",

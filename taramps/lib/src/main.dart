@@ -28,14 +28,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark().copyWith(
-            colorScheme: const ColorScheme.dark(
-          primary: Colors.white,
-        )),
-        initialRoute: '/',
-        routes: {'/': (context) => const HomeScreen()});
+    return Consumer<ThemeProvider>(builder: (context, themeProvider, child){
+      return MaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          initialRoute: '/',
+          routes: {'/': (context) => const HomeScreen()});
+    });
+
   }
 }
