@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:taramps/src/pages/home_screen.dart';
+import 'package:taramps/src/theme/app_theme.dart';
 import 'package:taramps/src/theme/theme_provider.dart';
 
 void main() async {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
     return Consumer<ThemeProvider>(builder: (context, themeProvider, child){
       return MaterialApp(
           title: 'Flutter Demo',
+          theme: themeProvider.isDarkTheme ? AppTheme.darkTheme : AppTheme.lightTheme,
           debugShowCheckedModeBanner: false,
           initialRoute: '/',
           routes: {'/': (context) => const HomeScreen()});
